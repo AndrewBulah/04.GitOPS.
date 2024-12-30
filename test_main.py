@@ -19,5 +19,9 @@ class TestStringMethods(unittest.TestCase):
     def test_numeric_string(self):
         self.assertEqual(reverse_string("12345"), "54321")
 
+    # Добавим заведомо неверный тест
+    def test_failed_case(self):
+        self.assertEqual(reverse_string("test"), "wrong_value")  # Этот тест не пройдет
+
 if __name__ == '__main__':
     unittest.main()
